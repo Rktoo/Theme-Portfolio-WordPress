@@ -2,7 +2,7 @@
     <div class="max-w-6xl mx-auto px-10">
         <h2 class="text-4xl font-bold text-center text-gray-800">Mes Projets</h2>
         <p class="text-center text-gray-600 mt-4">Découvrez quelques projets sur lesquels j'ai travaillé récemment.</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
             <!-- Boucle sur les projets -->
             <?php
             $args = ["post_type" => '"projets',];

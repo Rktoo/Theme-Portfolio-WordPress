@@ -15,7 +15,7 @@ nav div ul li {
     @apply py-4; 
 }
 
-nav div ul li a {
+nav div ul li a, footer {
     @apply font-semibold
 }
 
@@ -26,6 +26,8 @@ nav div ul li a {
 #scroll-btn {
     transition : all .3s ease-in-out;
 }
+
+
 
 
 html {
