@@ -17,7 +17,7 @@ nav div ul li {
 
 
 #progress-bar {
-    @apply transition-all duration-200 ease-in-out;
+    @apply transition-all duration-300 ease-in-out;
 }
 
 html {

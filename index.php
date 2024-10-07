@@ -16,7 +16,7 @@ get_header();
         "from-purple-300 to-purple-500" // Violet
     ];
 
-    $ids = ["content", "skills", "project", "contact"];
+    $ids = ["content", "skills", "projects", "contact"];
     // Les templates
     $templateParts = [
         'template-parts/home-content',

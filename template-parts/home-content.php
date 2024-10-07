@@ -1,6 +1,6 @@
 <!-- home-content.php -->
 
-<div class="flex flex-col justify-start items-start">
+<div class="flex flex-col justify-start items-start -mt-28">
     <h2 class="text-5xl font-bold text-gray-800">Salut, je suis <span class="text-teal-500">John Doe</span></h2>
     <p class="text-xl mt-4 text-gray-700">Développeur Web Full-Stack passionné par la création d'expériences numériques modernes et élégantes.</p>
     <div class="mt-6">
