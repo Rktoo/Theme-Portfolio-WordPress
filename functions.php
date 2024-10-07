@@ -13,6 +13,7 @@ function magnific_portfolio_enqueue_scripts()
 {
     wp_enqueue_style('style', get_template_directory_uri() . "/assets/css/output.css");
     wp_enqueue_style('otherstyle', get_template_directory_uri() . "/assets/css/other.css");
+    wp_enqueue_script('script-01', get_template_directory_uri() . "/assets/js/script-01.js", [], true);
 }
 
 

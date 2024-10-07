@@ -14,3 +14,18 @@ nav div ul {
 nav div ul li {
     @apply py-4; /* Utilise la classe Tailwind pour le padding vertical */
 }
+
+
+#progress-bar {
+    @apply transition-all duration-200 ease-in-out;
+}
+
+html {
+    margin-top: 0 !important;
+}
+#wpadminbar {
+    display: none !important;
+    position: fixed;
+    top: -32px; /* Cache et supprime l'espace occupé */
+    width: 100%;
+}

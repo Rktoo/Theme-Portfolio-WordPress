@@ -16,6 +16,7 @@ get_header();
         "from-purple-300 to-purple-500" // Violet
     ];
 
+    $ids = ["content", "skills", "project", "contact"];
     // Les templates
     $templateParts = [
         'template-parts/home-content',
@@ -29,7 +30,7 @@ get_header();
     ?>
         <section
             class="w-full min-h-screen bg-gradient-to-bl flex flex-col justify-center items-center <?php echo $bgs[$i]; ?>"
-            id="section-01">
+            id="<?php echo $ids[$i]; ?>">
             <div class="max-w-6xl mx-auto p-10">
                 <?php
                 get_template_part($templateParts[$i]);

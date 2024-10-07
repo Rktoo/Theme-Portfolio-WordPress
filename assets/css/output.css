@@ -633,24 +633,12 @@ video {
   display: grid;
 }
 
-.h-2 {
-  height: 0.5rem;
-}
-
-.h-48 {
-  height: 12rem;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
 .h-1 {
   height: 0.25rem;
 }
 
-.h-\[0\.10rem\] {
-  height: 0.10rem;
+.h-48 {
+  height: 12rem;
 }
 
 .min-h-screen {
@@ -790,9 +778,9 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-rose-300 {
-  --tw-gradient-from: #fda4af var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(253 164 175 / 0) var(--tw-gradient-to-position);
+.from-slate-300 {
+  --tw-gradient-from: #cbd5e1 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(203 213 225 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -828,8 +816,8 @@ video {
   --tw-gradient-to: #a855f7 var(--tw-gradient-to-position);
 }
 
-.to-rose-700 {
-  --tw-gradient-to: #be123c var(--tw-gradient-to-position);
+.to-slate-700 {
+  --tw-gradient-to: #334155 var(--tw-gradient-to-position);
 }
 
 .to-teal-500 {
@@ -974,6 +962,24 @@ nav div ul li {
   padding-top: 1rem;
   padding-bottom: 1rem;
   /* Utilise la classe Tailwind pour le padding vertical */
+}
+
+#progress-bar {
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  margin-top: 0 !important;
+}
+
+#wpadminbar {
+  display: none !important;
+  position: fixed;
+  top: -32px;
+  /* Cache et supprime l'espace occupé */
+  width: 100%;
 }
 
 .hover\:bg-gray-900:hover {

@@ -11,7 +11,7 @@
 
 <body <?php body_class(); ?>>
     <header id="header" class="w-full border-b  bg-gradient-to-r from-blue-500 to-teal-500 text-white">
-        <div class="fixed top-0 left-0 h-[0.10rem] w-full bg-gradient-to-tr from-rose-300 to-rose-700" id="progress-bar"></div>
+        <div class="fixed top-0 left-0 h-1 w-full bg-gradient-to-tr from-slate-300 to-slate-700" id="progress-bar"></div>
         <div class="max-w-6xl mx-auto px-10">
             <h2><?php bloginfo('name'); ?></h2>
             <nav>
