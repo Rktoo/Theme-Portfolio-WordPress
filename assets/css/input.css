@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* En utilisant Tailwind directement */
+#header div {
+    @apply flex flex-row justify-between items-center;
+}
+
+nav div ul {
+    @apply flex flex-row justify-between items-center gap-4; /* Utilise gap-4 pour un espacement */
+}
+
+nav div ul li {
+    @apply py-4; /* Utilise la classe Tailwind pour le padding vertical */
+}
