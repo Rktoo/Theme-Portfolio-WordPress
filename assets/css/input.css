@@ -2,23 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-/* En utilisant Tailwind directement */
+
 #header div {
     @apply flex flex-row justify-between items-center;
 }
 
 nav div ul {
-    @apply flex flex-row justify-between items-center gap-4; /* Utilise gap-4 pour un espacement */
+    @apply flex flex-row justify-between items-center gap-4; 
 }
 
 nav div ul li {
-    @apply py-4; /* Utilise la classe Tailwind pour le padding vertical */
+    @apply py-4; 
 }
 
+nav div ul li a {
+    @apply font-semibold
+}
 
 #progress-bar {
     @apply transition-all duration-300 ease-in-out;
 }
+
+#scroll-btn {
+    transition : all .3s ease-in-out;
+}
+
 
 html {
     margin-top: 0 !important;
@@ -29,3 +37,4 @@ html {
     top: -32px; /* Cache et supprime l'espace occupé */
     width: 100%;
 }
+

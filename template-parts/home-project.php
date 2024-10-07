@@ -15,10 +15,9 @@
                         <img src="<?php the_post_thumbnail_url(); ?>" alt="Project 1" class="w-full h-60 object-cover">
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-gray-800"><?php the_title(); ?></h3>
-                            <p class="mt-2 text-gray-600"><?php the_excerpt(); ?></p>
+                            <p class="excerpts mt-2 text-gray-600"><?php the_excerpt(); ?></p>
                         </div>
                         <div class=" w-full flex">
-
                             <a href="<?php the_permalink(); ?>" class="w-full px-4 py-2 text-center bg-sky-400 hover:bg-sky-600 text-white transition-colors duration-200 ease-in-out ">Voir le projet</a>
                         </div>
                     </div>
@@ -26,7 +25,10 @@
                 endwhile;
             endif;
             ?>
-
+        </div>
+        <div class="mt-10 flex justify-end items-center">
+            <a href="#projects" class="bg-teal-400 text-white px-6 py-3 rounded-lg shadow-md hover:bg-red-500">Voir tous les projets</a>
+            <a href="#contact" class="ml-4 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-900">Me contacter</a>
         </div>
     </div>
 </section>
