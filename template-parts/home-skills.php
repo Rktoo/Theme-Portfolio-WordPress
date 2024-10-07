@@ -19,7 +19,7 @@
             endwhile;
         endif; ?>
     </div>
-    <div class="mt-10 flex justify-center items-center">
+    <div class="mt-10 w-full flex justify-center md:justify-center items-center">
         <a href="#projects" class="bg-teal-400 text-white px-6 py-3 rounded-lg shadow-md hover:bg-red-500">Voir mes projets</a>
         <a href="#contact" class="ml-4 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-900">Me contacter</a>
     </div>
