@@ -5,16 +5,20 @@
 body {
     @apply min-w-80;
 }
-#header div {
-    @apply flex flex-row justify-between items-center;
+.parent_ {
+    @apply w-full h-full flex flex-col md:flex-row  justify-between items-center ;
+}
+
+#logo {
+    @apply mt-2 text-lg tracking-widest uppercase font-bold;
 }
 
 nav div ul {
-    @apply h-full flex flex-row justify-between items-center gap-4; 
+    @apply w-full flex justify-between gap-4; 
 }
 
 nav div ul li {
-    @apply py-10 hover:underline underline-offset-4 transition-all duration-200 ease-in-out; 
+    @apply py-2 md:py-10 hover:underline underline-offset-4 transition-all duration-200 ease-in-out; 
 }
 
 nav div ul li a, footer {
@@ -27,16 +31,5 @@ nav div ul li a, footer {
 
 #scroll-btn {
     transition : all .3s ease-in-out;
-}
-
-html {
-    margin-top: 0 !important;
-}
-
-#wpadminbar {
-    display: none !important;
-    position: fixed;
-    top: -32px; /* Cache et supprime l'espace occupé */
-    width: 100%;
 }
 

@@ -554,40 +554,6 @@ video {
   display: none;
 }
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
 .fixed {
   position: fixed;
 }
@@ -689,16 +655,16 @@ video {
   display: grid;
 }
 
+.h-1 {
+  height: 0.25rem;
+}
+
 .h-10 {
   height: 2.5rem;
 }
 
 .h-12 {
   height: 3rem;
-}
-
-.h-2 {
-  height: 0.5rem;
 }
 
 .h-56 {
@@ -779,10 +745,6 @@ video {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.flex-row {
-  flex-direction: row;
 }
 
 .flex-col {
@@ -1011,6 +973,11 @@ video {
   padding-right: 2.5rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1166,25 +1133,40 @@ body {
   min-width: 20rem;
 }
 
-#header div {
+.parent_ {
   display: flex;
-  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
+@media (min-width: 768px) {
+  .parent_ {
+    flex-direction: row;
+  }
+}
+
+#logo {
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 nav div ul {
   display: flex;
-  height: 100%;
-  flex-direction: row;
-  align-items: center;
+  width: 100%;
   justify-content: space-between;
   gap: 1rem;
 }
 
 nav div ul li {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   text-underline-offset: 4px;
   transition-property: all;
   transition-duration: 200ms;
@@ -1193,6 +1175,13 @@ nav div ul li {
 
 nav div ul li:hover {
   text-decoration-line: underline;
+}
+
+@media (min-width: 768px) {
+  nav div ul li {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
 }
 
 nav div ul li a, footer {
@@ -1207,18 +1196,6 @@ nav div ul li a, footer {
 
 #scroll-btn {
   transition : all .3s ease-in-out;
-}
-
-html {
-  margin-top: 0 !important;
-}
-
-#wpadminbar {
-  display: none !important;
-  position: fixed;
-  top: -32px;
-  /* Cache et supprime l'espace occupé */
-  width: 100%;
 }
 
 .hover\:animate-none:hover {
@@ -1326,6 +1303,11 @@ html {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 

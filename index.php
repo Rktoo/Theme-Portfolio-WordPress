@@ -30,7 +30,7 @@ get_header();
     for ($i = 0; $i < count($templateParts); $i++) :
     ?>
         <section
-            class="md:flex md:justify-center md:items-center w-full md:min-h-screen bg-gradient-to-bl  <?php echo $bgs[$i]; ?>"
+            class=" md:flex md:justify-center md:items-center w-full md:min-h-screen bg-gradient-to-bl  <?php echo $bgs[$i]; ?>"
             id="<?php echo $ids[$i]; ?>">
             <div class="max-w-6xl mx-auto p-10 ">
                 <?php

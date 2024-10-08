@@ -7,8 +7,6 @@
             <section class="flex space-x-4" id="external-links">
                 <?php
 
-                use function PHPSTORM_META\type;
-
                 $args = [
                     'post_type' => 'liens_externes'
                 ];
