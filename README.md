@@ -3,7 +3,7 @@
 
 ## Description
 
-**Magnific Portfolio** est un thème WordPress conçu pour mettre en valeur vos projets, compétences et activités. Ce thème offre une interface utilisateur élégante et facile à personnaliser, idéale pour les professionnels souhaitant présenter leur travail de manière visuelle.
+**Magnific Portfolio** est un thème WordPress conçu pour mettre en valeur vos projets, compétences et activités/loisirs. Ce thème offre une interface utilisateur élégante et facile à personnaliser, idéale pour les professionnels souhaitant présenter leur travail de manière visuelle.
 
 ## Créateur
 
