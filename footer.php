@@ -6,26 +6,35 @@
             <!-- External links -->
             <section class="flex space-x-4" id="external-links">
                 <?php
+
+                use function PHPSTORM_META\type;
+
                 $args = [
                     'post_type' => 'liens_externes'
                 ];
                 $links = new WP_Query($args);
                 if ($links->have_posts()) :
                     while ($links->have_posts()): $links->the_post();
+                        $url = wp_strip_all_tags(get_the_content(), true);
+                        if (!empty($url)) :
+                            $url = esc_url(trim($url));
                 ?>
-                        <div>
-                            <a href="" class="w-10 h-10 ">
-                                <?php the_post_thumbnail('thumbnail', ['class' => "w-10 h-10 p-[0.1rem] border-black border-2 rounded-full hover:border-white transition-colors duration-200 ease-in"]) ?>
-                            </a>
-                        </div>
+                            <div>
+                                <a href="<?php echo $url; ?>"
+                                    class="w-10 h-10 " target="_blank">
+                                    <?php the_post_thumbnail('thumbnail', ['class' => "w-10 h-10 p-[0.1rem] border-black border-2 rounded-full hover:border-white transition-colors duration-200 ease-in"]) ?>
+                                </a>
+                            </div>
                 <?php
+                        endif;
                     endwhile;
                     wp_reset_postdata();
                 endif;
                 ?>
             </section>
-            <div class="w-1/2 h-[0.05rem] bg-[#f4f4f4]"></div>
-            <p>&copy; <?php echo date("Y"); ?> Mon Portfolio</p>
+            <div class=" w-1/2 h-[0.05rem] bg-[#f4f4f4]">
+            </div>
+            <p>&copy; <?php echo date("Y"); ?> Portfolio de <?php echo esc_html(get_theme_mod('user_name')); ?></p>
         </div>
     </div>
 

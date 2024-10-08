@@ -1,5 +1,6 @@
 <?php
 
+// ===== Setup du thème
 function magnific_portfolio_setup_theme()
 {
     add_theme_support('post-thumbnails');
@@ -9,6 +10,8 @@ function magnific_portfolio_setup_theme()
         'menu' => 'principal'
     ]);
 }
+
+// ===== Ajout des scripts
 function magnific_portfolio_enqueue_scripts()
 {
     wp_enqueue_style('style', get_template_directory_uri() . "/assets/css/output.css");
@@ -16,7 +19,7 @@ function magnific_portfolio_enqueue_scripts()
     wp_enqueue_script('script-01', get_template_directory_uri() . "/assets/js/script-01.js", [], true);
 }
 
-
+// ===== Création des customs post type CPT
 function perfect_portfolio_custom_post_type()
 {
     register_post_type('projets', [
@@ -128,26 +131,57 @@ function perfect_portfolio_custom_post_type()
     ]);
 }
 
-
+// ===== Création des customizers "Editable depuis l'onglet Apparence -> personnaliser -> Informations du portfolio"
 function perfect_portfolio_customize_register($wp_customize)
 {
+
+    // ===== Enregistrer le customizer
+    $wp_customize->add_section('magnific_portfolio_section', [
+        'title' => __('Informations du Portfolio', 'textdomain'),
+        'priority' => 30,
+    ]);
+
+    // ===== Ajout de l'option user_name dans le customizer
     $wp_customize->add_setting('user_name', [
         'default' => 'Herinjaka Tolotra',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
 
-    $wp_customize->add_section('perfect_portfolio_section', [
-        'title' => __('Informations du Portfolio', 'textdomain'),
-        'priority' => 30,
-    ]);
-
     $wp_customize->add_control('user_name_control', [
         'label' => __('Nom de l\'utilisateur', 'textdomain'),
-        'section' => 'perfect_portfolio_section',
+        'section' => 'magnific_portfolio_section',
         'settings' => 'user_name',
         'type' => 'text',
     ]);
 
+    // ===== Ajout de l'option user_description dans le customizer
+    $wp_customize->add_setting('user_description', [
+        'default' => 'Développeur Web Full-Stack passionné par la création d\'expériences numériques modernes et élégantes.',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control(
+        'user_description_control',
+        [
+            'label' => __('Description du poste de l\'utilisateur'),
+            'section' => 'magnific_portfolio_section',
+            'settings' => 'user_description',
+            'type' => 'text'
+        ]
+    );
+
+    // ===== Ajout de l'option user_email dans le customizer
+    $wp_customize->add_setting('user_email', [
+        'default' => 'john@doe.com',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control('user_email_control', [
+        'label' => __('Adresse email de l\'utilisateur'),
+        'section' => 'magnific_portfolio_section',
+        'settings' => 'user_email',
+        'type' => 'email'
+    ]);
+
+    // ===== Ajout de l'option hero_image dans le customizer
     $wp_customize->add_setting('hero_image', [
         'default' => '',
         'sanitize_callback' => 'esc_url_raw',
@@ -155,11 +189,12 @@ function perfect_portfolio_customize_register($wp_customize)
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_image', [
         'label' => __('Image de la bannière', 'perfect_portfolio'),
-        'section' => 'perfect_portfolio_section',
+        'section' => 'magnific_portfolio_section',
         'settings' => 'hero_image',
     ]));
 }
 
+// ===== Appel des fonctions
 add_action('after_setup_theme', 'magnific_portfolio_setup_theme');
 add_action('wp_enqueue_scripts', 'magnific_portfolio_enqueue_scripts');
 add_action('init', 'perfect_portfolio_custom_post_type');

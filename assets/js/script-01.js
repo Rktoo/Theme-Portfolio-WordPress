@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const progressBar = document.getElementById("progress-bar");
     const scrollBtn = document.getElementById("scroll-btn");
     const skills = document.querySelectorAll(".skills");
-    // ======= Progress bar 
+    // ===== Progress bar 
     if (progressBar) {
         progressBar.style.width = "0%";
         document.addEventListener("scroll", updateProgressBar);
@@ -17,14 +17,16 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollDocument(progressBarWidth);
     }
 
-    // ====== Scroll
+    // ===== Scroll
     function scrollDocument(progressBarWidth) {
         if (scrollBtn) {
             if (Number(progressBarWidth) < 10) {
                 scrollBtn.style.opacity = 0;
+                progressBar.classList.remove("animate-pulse");
 
             } else {
                 scrollBtn.style.opacity = 1;
+                progressBar.classList.add("animate-pulse");
             }
         }
     }
