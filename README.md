@@ -32,4 +32,4 @@ Ce projet est sous la **GNU General Public License**. Pour plus d'informations, 
 
 ## Contact
 
-Pour toute question ou demande d'assistance, veuillez me contacter mailto:heryinjaka72@gmail.com
+Pour toute question ou demande d'assistance, veuillez me [contacter](mailto:heryinjaka72@gmail.com).
