@@ -12,8 +12,8 @@
             <a href="#activities" class="bg-teal-400 text-white px-6 py-3 rounded-lg shadow-md hover:bg-red-500">Voir mes activités</a>
         </div>
     </div>
-    <div class="hero col-span-1 w-full h-full flex justify-center items-center lg:items-start ">
-        <div class="w-56 h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full bg-[#f4f4f4] shadow-lg overflow-hidden -mt-4 md:-mt-28">
+    <div class="hero col-span-1 w-full h-full flex justify-center items-center lg:items-start  transform -translate-x-4 -translate-y-2">
+        <div class="w-56 h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full bg-[#f4f4f4] shadow-lg overflow-hidden -mt-4  md:-mt-28">
             <img src="<?php echo get_theme_mod('hero_image'); ?>" alt="Image de bannière" class="w-56 h-56 md:w-64 md:h-64 lg:w-80 lg:h-80">
         </div>
     </div>

@@ -67,35 +67,64 @@ function perfect_portfolio_custom_post_type()
         'public' => true,
         'has_archive' => true,
         'rewrite' => ['slug' => 'competences'],
-        'supports' => ['title', 'editor', 'thumbnail', 'order'],
+        'supports' => ['title', 'editor', 'thumbnail'],
         'show_in_rest' => true,
     ]);
 
 
-    register_post_type('Activités', [
+    register_post_type('activites', [
         'labels' => [
             'name' => __('Activités'),
             'singular_name' => __('Activité'),
-            'add_new' => __('Ajouter un nouveau'),
+            'add_new' => __('Ajouter une activité'),
             'add_new_item' => __('Ajouter une nouvelle activité'),
-            'edit_item' => __('Modifier la activité'),
-            'new_item' => __('Nouveau activité'),
-            'view_item' => __('Voir la activité'),
+            'edit_item' => __('Modifier l\'activité'),
+            'new_item' => __('Nouvelle activité'),
+            'view_item' => __('Voir l\'activité'),
             'view_items' => __('Voir les activités'),
             'search_items' => __('Rechercher des activités'),
             'not_found' => __('Aucune activité trouvée'),
             'not_found_in_trash' => __('Aucune activité trouvée dans la corbeille'),
             'all_items' => __('Toutes les activités'),
             'archives' => __('Archives des activités'),
-            'attributes' => __('Attributs des activités'),
-            'insert_into_item' => __('Insérer dans la activité'),
-            'uploaded_to_this_item' => __('Téléchargé dans ca activité'),
+            'attributes' => __('Attributs de l\'activité'),
+            'insert_into_item' => __('Insérer dans l\'activité'),
+            'uploaded_to_this_item' => __('Téléchargé dans cette activité'),
         ],
         'public' => true,
         'has_archive' => true,
-        'rewrite' => ['slug' => 'Activites'],
-        'supports' => ['title', 'editor', 'thumbnail', 'order'],
+        'rewrite' => ['slug' => 'activites'],
+        'supports' => ['title', 'editor', 'thumbnail', 'revisions'],
         'show_in_rest' => true,
+        'menu_icon' => 'dashicons-clipboard',
+    ]);
+
+
+    register_post_type('liens_externes', [
+        'labels' => [
+            'name' => __('Liens externes'),
+            'singular_name' => __('Lien externe'),
+            'add_new' => __('Ajouter un lien externe'),
+            'add_new_item' => __('Ajouter un nouveau lien externe'),
+            'edit_item' => __('Modifier le lien externe'),
+            'new_item' => __('Nouveau lien externe'),
+            'view_item' => __('Voir le lien externe'),
+            'view_items' => __('Voir les liens externes'),
+            'search_items' => __('Rechercher des liens externes'),
+            'not_found' => __('Aucun lien externe trouvé'),
+            'not_found_in_trash' => __('Aucun lien externe trouvé dans la corbeille'),
+            'all_items' => __('Tous les liens externes'),
+            'archives' => __('Archives des liens externes'),
+            'attributes' => __('Attributs des liens externes'),
+            'insert_into_item' => __('Insérer dans le lien externe'),
+            'uploaded_to_this_item' => __('Téléchargé dans ce lien externe'),
+        ],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'liens-externes'],
+        'supports' => ['title', 'editor', 'thumbnail', 'revisions'],
+        'show_in_rest' => true,
+        'menu_icon' => 'dashicons-admin-links',
     ]);
 }
 

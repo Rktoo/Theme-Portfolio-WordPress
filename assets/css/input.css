@@ -2,17 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body {
+    @apply min-w-80;
+}
 #header div {
     @apply flex flex-row justify-between items-center;
 }
 
 nav div ul {
-    @apply flex flex-row justify-between items-center gap-4; 
+    @apply h-full flex flex-row justify-between items-center gap-4; 
 }
 
 nav div ul li {
-    @apply py-4; 
+    @apply py-10 hover:underline underline-offset-4 transition-all duration-200 ease-in-out; 
 }
 
 nav div ul li a, footer {
@@ -27,12 +29,10 @@ nav div ul li a, footer {
     transition : all .3s ease-in-out;
 }
 
-
-
-
 html {
     margin-top: 0 !important;
 }
+
 #wpadminbar {
     display: none !important;
     position: fixed;

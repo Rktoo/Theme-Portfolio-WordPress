@@ -13,7 +13,7 @@
         $activites = new WP_Query($args);
 
 
-        // Boucle pour afficher les loisirs
+        // Boucle pour afficher les loisirs/activités
         if ($activites->have_posts()) :
             while ($activites->have_posts()) : $activites->the_post();
         ?>
@@ -23,6 +23,7 @@
                 </div>
         <?php
             endwhile;
+            wp_reset_postdata();
         endif; ?>
     </div>
     <div class="mt-10 w-full flex justify-center md:justify-center items-center">
