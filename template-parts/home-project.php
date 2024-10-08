@@ -12,12 +12,20 @@
 
             if ($projets->have_posts()):
                 while ($projets->have_posts()) : $projets->the_post();
+                    $content = wp_strip_all_tags(get_the_content(), true);
+                    $word_limit = 50;
+                    $words;
+                    $exercpt;
+                    if ($content) :
+                        $words = explode(' ', $content);
+                        $exercpt = implode(' ', array_slice($words, 0, $word_limit));
+                    endif;
             ?>
                     <div class="flex flex-col justify-between items-center  bg-white shadow-md rounded-lg overflow-hidden">
                         <img src="<?php the_post_thumbnail_url(); ?>" alt="Project 1" class="w-full h-60 object-cover">
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-gray-800"><?php the_title(); ?></h3>
-                            <p class="excerpts mt-2 text-gray-600"><?php the_excerpt(); ?>[...]</p>
+                            <p class="excerpts mt-2 text-gray-600"><?php echo $exercpt . "[...]" ?></p>
                         </div>
                         <div class=" w-full flex">
                             <a href="<?php the_permalink(); ?>" class="w-full px-4 py-2 text-center bg-sky-400 hover:bg-sky-600 text-white transition-colors duration-200 ease-in-out ">Voir le projet</a>

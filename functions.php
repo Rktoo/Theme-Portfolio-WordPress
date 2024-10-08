@@ -22,114 +22,94 @@ function magnific_portfolio_enqueue_scripts()
 // ===== Création des customs post type CPT
 function perfect_portfolio_custom_post_type()
 {
-    register_post_type('projets', [
-        'labels' => [
-            'name' => __('Projets'),
-            'singular_name' => __('Projet'),
-            'add_new' => __('Ajouter un nouveau'),
-            'add_new_item' => __('Ajouter un nouveau projet'),
-            'edit_item' => __('Modifier le projet'),
-            'new_item' => __('Nouveau projet'),
-            'view_item' => __('Voir le projet'),
-            'view_items' => __('Voir les projets'),
-            'search_items' => __('Rechercher des projets'),
-            'not_found' => __('Aucun projet trouvé'),
-            'not_found_in_trash' => __('Aucun projet trouvé dans la corbeille'),
-            'all_items' => __('Tous les projets'),
-            'archives' => __('Archives des projets'),
-            'attributes' => __('Attributs des projets'),
-            'insert_into_item' => __('Insérer dans le projet'),
-            'uploaded_to_this_item' => __('Téléchargé dans ce projet'),
-        ],
-        'public' => true,
-        'has_archive' => true,
-        'rewrite' => ['slug' => 'projets'],
+    // Enregistrer les Custom Post Types
+    register_custom_post_type('projets', [
+        'name' => __('Projets'),
+        'singular_name' => __('Projet'),
+        'menu_icon' => 'dashicons-portfolio', // Icône 
         'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
-        'show_in_rest' => true,
+        'rewrite_slug' => 'projets',
+        'show_in_menu' => 'magnific-portfolio', // Regrouper sous le menu parent
     ]);
 
-    register_post_type('competences', [
-        'labels' => [
-            'name' => __('Competences'),
-            'singular_name' => __('Competence'),
-            'add_new' => __('Ajouter un nouveau'),
-            'add_new_item' => __('Ajouter une nouvelle compétence'),
-            'edit_item' => __('Modifier la compétence'),
-            'new_item' => __('Nouveau compétence'),
-            'view_item' => __('Voir la compétence'),
-            'view_items' => __('Voir les compétences'),
-            'search_items' => __('Rechercher des compétences'),
-            'not_found' => __('Aucune compétence trouvée'),
-            'not_found_in_trash' => __('Aucune compétence trouvée dans la corbeille'),
-            'all_items' => __('Toutes les compétences'),
-            'archives' => __('Archives des compétences'),
-            'attributes' => __('Attributs des compétences'),
-            'insert_into_item' => __('Insérer dans la compétence'),
-            'uploaded_to_this_item' => __('Téléchargé dans ca compétence'),
-        ],
-        'public' => true,
-        'has_archive' => true,
-        'rewrite' => ['slug' => 'competences'],
+    register_custom_post_type('competences', [
+        'name' => __('Compétences'),
+        'singular_name' => __('Compétence'),
+        'menu_icon' => 'dashicons-admin-tools', // Icône par défaut
         'supports' => ['title', 'editor', 'thumbnail'],
-        'show_in_rest' => true,
+        'rewrite_slug' => 'competences',
+        'show_in_menu' => 'magnific-portfolio',
     ]);
 
-
-    register_post_type('activites', [
-        'labels' => [
-            'name' => __('Activités'),
-            'singular_name' => __('Activité'),
-            'add_new' => __('Ajouter une activité'),
-            'add_new_item' => __('Ajouter une nouvelle activité'),
-            'edit_item' => __('Modifier l\'activité'),
-            'new_item' => __('Nouvelle activité'),
-            'view_item' => __('Voir l\'activité'),
-            'view_items' => __('Voir les activités'),
-            'search_items' => __('Rechercher des activités'),
-            'not_found' => __('Aucune activité trouvée'),
-            'not_found_in_trash' => __('Aucune activité trouvée dans la corbeille'),
-            'all_items' => __('Toutes les activités'),
-            'archives' => __('Archives des activités'),
-            'attributes' => __('Attributs de l\'activité'),
-            'insert_into_item' => __('Insérer dans l\'activité'),
-            'uploaded_to_this_item' => __('Téléchargé dans cette activité'),
-        ],
-        'public' => true,
-        'has_archive' => true,
-        'rewrite' => ['slug' => 'activites'],
-        'supports' => ['title', 'editor', 'thumbnail', 'revisions'],
-        'show_in_rest' => true,
+    register_custom_post_type('activites', [
+        'name' => __('Activités'),
+        'singular_name' => __('Activité'),
         'menu_icon' => 'dashicons-clipboard',
+        'supports' => ['title', 'editor', 'thumbnail', 'revisions'],
+        'rewrite_slug' => 'activites',
+        'show_in_menu' => 'magnific-portfolio',
     ]);
 
-
-    register_post_type('liens_externes', [
-        'labels' => [
-            'name' => __('Liens externes'),
-            'singular_name' => __('Lien externe'),
-            'add_new' => __('Ajouter un lien externe'),
-            'add_new_item' => __('Ajouter un nouveau lien externe'),
-            'edit_item' => __('Modifier le lien externe'),
-            'new_item' => __('Nouveau lien externe'),
-            'view_item' => __('Voir le lien externe'),
-            'view_items' => __('Voir les liens externes'),
-            'search_items' => __('Rechercher des liens externes'),
-            'not_found' => __('Aucun lien externe trouvé'),
-            'not_found_in_trash' => __('Aucun lien externe trouvé dans la corbeille'),
-            'all_items' => __('Tous les liens externes'),
-            'archives' => __('Archives des liens externes'),
-            'attributes' => __('Attributs des liens externes'),
-            'insert_into_item' => __('Insérer dans le lien externe'),
-            'uploaded_to_this_item' => __('Téléchargé dans ce lien externe'),
-        ],
-        'public' => true,
-        'has_archive' => true,
-        'rewrite' => ['slug' => 'liens-externes'],
-        'supports' => ['title', 'editor', 'thumbnail', 'revisions'],
-        'show_in_rest' => true,
+    register_custom_post_type('liens_externes', [
+        'name' => __('Liens externes'),
+        'singular_name' => __('Lien externe'),
         'menu_icon' => 'dashicons-admin-links',
+        'supports' => ['title', 'editor', 'thumbnail', 'revisions'],
+        'rewrite_slug' => 'liens-externes',
+        'show_in_menu' => 'magnific-portfolio',
     ]);
 }
+
+// ===== Fonction pour enregistrer un Custom Post Type
+function register_custom_post_type($post_type, $labels)
+{
+    $default_labels = [
+        'add_new' => __('Ajouter un nouveau'),
+        'add_new_item' => __('Ajouter un nouveau ' . strtolower($labels['singular_name'])),
+        'edit_item' => __('Modifier ' . strtolower($labels['singular_name'])),
+        'new_item' => __('Nouveau ' . strtolower($labels['singular_name'])),
+        'view_item' => __('Voir ' . strtolower($labels['singular_name'])),
+        'view_items' => __('Voir ' . strtolower($labels['name'])),
+        'search_items' => __('Rechercher ' . strtolower($labels['name'])),
+        'not_found' => __('Aucun ' . strtolower($labels['name']) . ' trouvé'),
+        'not_found_in_trash' => __('Aucun ' . strtolower($labels['name']) . ' trouvé dans la corbeille'),
+        'all_items' => __('Tous les ' . strtolower($labels['name'])),
+        'archives' => __('Archives des ' . strtolower($labels['name'])),
+        'attributes' => __('Attributs des ' . strtolower($labels['name'])),
+        'insert_into_item' => __('Insérer dans ' . strtolower($labels['singular_name'])),
+        'uploaded_to_this_item' => __('Téléchargé dans ' . strtolower($labels['singular_name'])),
+    ];
+
+    // Fusionner les labels par défaut avec les labels personnalisés
+    $final_labels = array_merge($default_labels, $labels);
+
+    register_post_type($post_type, [
+        'labels' => $final_labels,
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => $labels['rewrite_slug']],
+        'supports' => $labels['supports'],
+        'show_in_rest' => true,
+        'menu_icon' => isset($labels['menu_icon']) ? $labels['menu_icon'] : 'dashicons-post',
+        'show_in_menu' => isset($labels['show_in_menu']) ? $labels['show_in_menu'] : true,
+    ]);
+}
+
+// ===== Création du menu parent pour grouper les CPT du thème
+function add_magnific_portfolio_menu()
+{
+    add_menu_page(
+        __('Magnific Portfolio'),
+        __('Magnific Portfolio'),
+        'manage_options',
+        'magnific-portfolio',
+        '',
+        'dashicons-admin-customizer',
+        10
+    );
+}
+
+
 
 // ===== Création des customizers "Editable depuis l'onglet Apparence -> personnaliser -> Informations du portfolio"
 function perfect_portfolio_customize_register($wp_customize)
@@ -195,7 +175,8 @@ function perfect_portfolio_customize_register($wp_customize)
 }
 
 // ===== Appel des fonctions
+add_action('admin_menu', 'add_magnific_portfolio_menu');
+add_action('init', 'perfect_portfolio_custom_post_type');
 add_action('after_setup_theme', 'magnific_portfolio_setup_theme');
 add_action('wp_enqueue_scripts', 'magnific_portfolio_enqueue_scripts');
-add_action('init', 'perfect_portfolio_custom_post_type');
 add_action('customize_register', 'perfect_portfolio_customize_register');
