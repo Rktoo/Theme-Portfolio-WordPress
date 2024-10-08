@@ -26,14 +26,10 @@ Pour ajouter des informations sur l'utilisateur du thème :
 2. Cliquez sur **Informations sur le portfolio**.
 3. Remplissez les champs nécessaires pour afficher vos informations personnelles et professionnelles.
 
-## Contributions
-
-Les contributions sont les bienvenues ! Si vous souhaitez contribuer au projet, n'hésitez pas à soumettre une demande de tirage (pull request) ou à ouvrir une issue pour discuter des modifications que vous souhaitez apporter.
-
 ## Licence
 
 Ce projet est sous la **GNU General Public License**. Pour plus d'informations, consultez le fichier LICENSE.
 
 ## Contact
 
-Pour toute question ou demande d'assistance, veuillez me contacter mailto:heryinjaka@gmail.com
+Pour toute question ou demande d'assistance, veuillez me contacter mailto:heryinjaka72@gmail.com
