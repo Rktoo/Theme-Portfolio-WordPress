@@ -41,7 +41,7 @@ function perfect_portfolio_custom_post_type()
         'public' => true,
         'has_archive' => true,
         'rewrite' => ['slug' => 'projets'],
-        'supports' => ['title', 'editor', 'thumbnail'],
+        'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
         'show_in_rest' => true,
     ]);
 
@@ -54,7 +54,7 @@ function perfect_portfolio_custom_post_type()
             'edit_item' => __('Modifier la compétence'),
             'new_item' => __('Nouveau compétence'),
             'view_item' => __('Voir la compétence'),
-            'view_items' => __('Voir les projets'),
+            'view_items' => __('Voir les compétences'),
             'search_items' => __('Rechercher des compétences'),
             'not_found' => __('Aucune compétence trouvée'),
             'not_found_in_trash' => __('Aucune compétence trouvée dans la corbeille'),
@@ -67,6 +67,33 @@ function perfect_portfolio_custom_post_type()
         'public' => true,
         'has_archive' => true,
         'rewrite' => ['slug' => 'competences'],
+        'supports' => ['title', 'editor', 'thumbnail', 'order'],
+        'show_in_rest' => true,
+    ]);
+
+
+    register_post_type('Activités', [
+        'labels' => [
+            'name' => __('Activités'),
+            'singular_name' => __('Activité'),
+            'add_new' => __('Ajouter un nouveau'),
+            'add_new_item' => __('Ajouter une nouvelle activité'),
+            'edit_item' => __('Modifier la activité'),
+            'new_item' => __('Nouveau activité'),
+            'view_item' => __('Voir la activité'),
+            'view_items' => __('Voir les activités'),
+            'search_items' => __('Rechercher des activités'),
+            'not_found' => __('Aucune activité trouvée'),
+            'not_found_in_trash' => __('Aucune activité trouvée dans la corbeille'),
+            'all_items' => __('Toutes les activités'),
+            'archives' => __('Archives des activités'),
+            'attributes' => __('Attributs des activités'),
+            'insert_into_item' => __('Insérer dans la activité'),
+            'uploaded_to_this_item' => __('Téléchargé dans ca activité'),
+        ],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'Activites'],
         'supports' => ['title', 'editor', 'thumbnail', 'order'],
         'show_in_rest' => true,
     ]);

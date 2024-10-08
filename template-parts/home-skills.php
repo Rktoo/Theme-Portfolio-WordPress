@@ -1,3 +1,5 @@
+<!-- home-skills -->
+
 <div class="max-w-6xl mx-auto px-10">
     <h2 class="text-4xl font-bold text-center text-white">Compétences</h2>
     <p class="text-center text-[#f4f4f4] mt-4">Voici quelques-unes des technologies avec lesquelles je travaille.</p>

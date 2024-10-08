@@ -1,3 +1,5 @@
+<!-- home-contact -->
+
 <section id="contact" class="contact-section w-full py-20 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
     <div class="max-w-6xl mx-auto px-10">
         <h2 class="text-4xl font-bold text-center">Contactez-moi</h2>

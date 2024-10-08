@@ -22,6 +22,7 @@ get_header();
         'template-parts/home-content',
         'template-parts/home-skills',
         'template-parts/home-project',
+        'template-parts/home-activities',
         'template-parts/home-contact'
     ];
 
