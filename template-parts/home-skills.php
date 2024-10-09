@@ -2,20 +2,23 @@
 
 <div class=" max-w-6xl mx-auto px-10">
     <h2 class="text-4xl font-bold text-center text-white">Compétences</h2>
-    <p class="text-center text-[#f4f4f4] mt-4">Voici quelques-unes des technologies avec lesquelles je travaille.</p>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
+    <p class="text-center text-[#f4f4f4] mt-4 ">Voici quelques-unes des technologies avec lesquelles je travaille.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8">
         <?php
         $args = [
             "post_type" => "competences",
             "order" => "DESC",
         ];
         $competences = new WP_Query($args);
+
         if ($competences->have_posts()) :
             while ($competences->have_posts()) : $competences->the_post();
+                $content = wp_strip_all_tags(get_the_content(), true);
+                $content = esc_html($content);
         ?>
                 <div class="text-center skills">
                     <span class="text-4xl text-teal-500"><?php esc_html(the_title()) ?></span>
-                    <p class="mt-2 text-[#f4f4f4]"><?php the_content() ?></p>
+                    <p class="mt-2 text-start text-[#f4f4f4]"><?php echo $content ?? ""; ?></p>
                 </div>
         <?php
             endwhile;

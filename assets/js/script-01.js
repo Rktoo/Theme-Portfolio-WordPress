@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     const progressBar = document.getElementById("progress-bar");
     const scrollBtn = document.getElementById("scroll-btn");
-    const skills = document.querySelectorAll(".skills");
+    const slider = document.getElementById("slider_");
+    const leftArrow = document.getElementById("left-arrow_");
+    const rightArrow = document.getElementById("right_arrow_");
+
     // ===== Progress bar 
     if (progressBar) {
         progressBar.style.width = "0%";
@@ -31,18 +34,112 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // ===== Skills
-    if (skills) {
+    // ===== slider
+    if (slider && leftArrow && rightArrow) {
 
-        skills.forEach((skill, index) => {
-            let competence = skill.firstElementChild.nextElementSibling.nextElementSibling;
+        let scrollAmount = 500;
+        window.addEventListener("resize", setScrollAmount);
+        const totalScrollWidth = slider.scrollWidth - slider.clientWidth;
+        const projectElements = slider.children.length - 1;
+        let xValue = 0;
+        let isSliding = true;
 
-            if (competence.textContent.length < 1) {
-                competence.remove;
+        // ===== Fonction pour editer le scrollAmount suivant la taille de l'écran
+        function setScrollAmount() {
+            if (window.innerWidth < 768) {
+                scrollAmount = 288;
+            } else {
+                scrollAmount = 415;
+            }
+        }
+
+        setScrollAmount();
+
+
+        rightArrow.addEventListener("click", function () {
+            if (isSliding) {
+                stopAutoSlide();
+            }
+            slideToRight();
+        });
+
+        leftArrow.addEventListener("click", function () {
+            if (isSliding) {
+                stopAutoSlide();
             }
 
-            competence.classList.add("mt-2");
-            competence.classList.add("text-[#f4f4f4]");
-        })
+            if (slider.scrollLeft <= 0) {
+                slider.scrollBy({
+                    left: -scrollAmount,
+                    behavior: "smooth"
+                });
+                setTimeout(() => {
+                    slider.scrollTo({
+                        left: totalScrollWidth,
+                        behavior: "auto"
+                    });
+                    xValue = projectElements - 1;
+                }, 200)
+            } else {
+                xValue -= 1;
+                slider.scrollBy({
+                    left: -scrollAmount,
+                    behavior: "smooth"
+                });
+            }
+        });
+
+
+
+        // ===== Fonction pour slider vers la droite
+        function slideToRight() {
+
+            if (slider.scrollLeft + scrollAmount + 200 >= totalScrollWidth && xValue >= projectElements - 1) {
+                slider.scrollBy({
+                    left: scrollAmount,
+                    behavior: "smooth"
+                });
+
+                setTimeout(() => {
+                    slider.scrollTo({
+                        left: 0,
+                        behavior: "auto"
+                    });
+                    xValue = 0;
+                }, 200);
+            } else {
+                xValue += 1;
+                slider.scrollBy({
+                    left: scrollAmount,
+                    behavior: "smooth"
+                });
+            }
+        }
+
+        // ===== Fonction pour le slide automatique
+        let autoSlide;
+        function startAutoSlide() {
+            isSliding = true;
+            autoSlide = setInterval(() => {
+                slideToRight();
+
+            }, 3000);
+        }
+
+        // ===== Fonction pour arrêter le slide automatique
+        function stopAutoSlide() {
+            clearInterval(autoSlide);
+            isSliding = false;
+            // ===== Redémarrage du slide automatique après un délai de 10s
+            setTimeout(() => {
+                startAutoSlide();
+            }, 10000);
+        }
+
+        startAutoSlide();
+
+
     }
+
+
 });

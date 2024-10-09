@@ -5,19 +5,20 @@ get_header();
 <div class="">
     <?php
 
-    // Les bg couleurs
+    // ===== Les bg couleurs
     $bgs = [
-        "from-green-100 to-green-300", // Vert
-        "from-gray-400 to-gray-600", // Gris
-        "from-blue-gray-500 to-blue-gray-700", // Gris bleu
-        "from-teal-300 to-teal-500", // Teal
-        "from-cyan-300 to-cyan-500", // Cyan
-        "from-yellow-200 to-yellow-400", // Jaune
-        "from-purple-300 to-purple-500" // Violet
+        "from-green-100 to-green-300",
+        "from-gray-400 to-gray-600",
+        "from-blue-gray-500 to-blue-gray-700",
+        "from-teal-300 to-teal-500",
+        "from-cyan-300 to-cyan-500",
+        "from-yellow-200 to-yellow-400",
+        "from-purple-300 to-purple-500"
     ];
 
     $ids = ["content", "skills", "projects", "activities", "contact"];
-    // Les templates
+
+    // ===== Les templates
     $templateParts = [
         'template-parts/home-content',
         'template-parts/home-skills',
@@ -26,7 +27,7 @@ get_header();
         'template-parts/home-contact'
     ];
 
-    // Boucle sur le nombre de templates disponibles
+    // ===== Boucle sur le nombre de templates disponibles
     for ($i = 0; $i < count($templateParts); $i++) :
     ?>
         <section
