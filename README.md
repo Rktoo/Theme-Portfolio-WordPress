@@ -25,7 +25,7 @@ Pour ajouter des informations sur l'utilisateur du thème :
 1. Allez dans **Apparence** > **Personnaliser**.
 2. Cliquez sur **Informations sur le portfolio**.
 3. Remplissez les champs nécessaires pour afficher vos informations personnelles et professionnelles.
-
+4. Ajoutez vos projets, vos compétences vos activités et vos liens depuis l'interface admin du menu **magnific portfolio**
 ## Licence
 
 Ce projet est sous la **GNU General Public License**. Pour plus d'informations, consultez le fichier LICENSE.
