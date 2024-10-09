@@ -13,6 +13,7 @@
             ?></title>
     <!-- Inclusion des styles et script dans le head -->
     <?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>

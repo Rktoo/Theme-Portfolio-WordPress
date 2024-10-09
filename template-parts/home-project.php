@@ -5,7 +5,7 @@
         <p class="text-center text-gray-600 mt-4">Découvrez quelques projets sur lesquels j'ai travaillé récemment.</p>
 
         <!-- Slider container -->
-        <div class=" max-w-[600px] px-[0.7rem] md:px-[6.5rem] flex flex-row justify-start items-center flex-nowrap gap-8 mt-8 overflow-hidden scroll-smooth" id="slider_">
+        <div class=" max-w-[600px] px-[0.7rem] md:px-[6.5rem] flex flex-row justify-between items-center flex-nowrap gap-8 mt-8 overflow-hidden scroll-smooth  " id="slider_">
             <!-- Boucle sur les projets -->
             <?php
             $args = ["post_type" => 'projets'];
@@ -22,8 +22,11 @@
                         $exercpt = implode(' ', array_slice($words, 0, $word_limit));
                     endif;
             ?>
-                    <div class="relative flex-shrink-0 w-64 md:w-96 h-[30rem] flex flex-col justify-between items-center bg-white shadow-md rounded-lg overflow-hidden" id="extrait_">
-                        <img src="<?php the_post_thumbnail_url(); ?>" alt="Project" class="w-full h-60 object-cover">
+                    <div class=" relative flex-shrink-0 w-64 md:w-96 h-[30rem] scale-95 flex flex-col justify-start items-center bg-white shadow-md rounded-lg transition-all duration-200 ease-in-out animate-pulse overflow-hidden" id="extrait_">
+                        <div class="absolute top-0 left-0 w-full h-[91%] backdrop-blur-[2px]  opacity-70  z-30 blur_effect_">
+                        </div>
+
+                        <img src="<?php the_post_thumbnail_url(); ?>" alt="Project" class="w-full max-h-44 object-center">
                         <div class="p-6 flex flex-col justify-start items-start">
                             <h3 class="text-lg font-bold text-gray-800"><?php the_title(); ?></h3>
                             <p class="excerpts mt-2 text-gray-600"><?php echo $exercpt; ?></p>
@@ -33,6 +36,7 @@
                         // ===== effect sur les extraits
                         get_template_part('template-parts/project-excerpt-effect');
                         ?>
+
 
                         <div class="absolute bottom-0 left-0 w-full flex">
                             <a href="<?php the_permalink(); ?>" class="w-full px-4 py-2 text-center bg-sky-400 hover:bg-sky-600 text-white transition-colors duration-200 ease-in-out">Voir le projet</a>
