@@ -162,10 +162,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (projectElements === index) {
                     projectBlur.classList.replace("backdrop-blur-[2px]", "backdrop-blur-none");
+                    projectBlur.classList.replace("h-full", "h-[91%]");
+                    projectBlur.classList.remove("bg-black/70");
                     project.classList.replace("animate-pulse", "animate-none");
                     project.classList.replace("scale-95", "scale-100");
                 } else {
                     projectBlur.classList.replace("backdrop-blur-none", "backdrop-blur-[2px]");
+                    projectBlur.classList.replace("h-[91%]", "h-full");
+                    projectBlur.classList.add("bg-black/70");
                     project.classList.replace("animate-none", "animate-pulse");
                     project.classList.replace("scale-100", "scale-95");
                 }

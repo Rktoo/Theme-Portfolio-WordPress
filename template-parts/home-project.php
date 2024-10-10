@@ -23,7 +23,7 @@
                     endif;
             ?>
                     <div class=" relative flex-shrink-0 w-64 md:w-96 h-[30rem] scale-95 flex flex-col justify-start items-center bg-white shadow-md rounded-lg transition-all duration-200 ease-in-out animate-pulse overflow-hidden" id="extrait_">
-                        <div class="absolute top-0 left-0 w-full h-[91%] backdrop-blur-[2px]  opacity-70  z-30 blur_effect_">
+                        <div class="absolute top-0 left-0 w-full h-[91%] bg-black/70 backdrop-blur-[2px]  opacity-70  z-30 blur_effect_">
                         </div>
 
                         <img src="<?php the_post_thumbnail_url(); ?>" alt="Project" class="w-full max-h-44 object-center">
