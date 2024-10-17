@@ -964,9 +964,8 @@ video {
   background-color: rgb(244 244 244 / var(--tw-bg-opacity));
 }
 
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+.bg-black\/70 {
+  background-color: rgb(0 0 0 / 0.7);
 }
 
 .bg-gray-100 {
@@ -997,10 +996,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-black\/70 {
-  background-color: rgb(0 0 0 / 0.7);
 }
 
 .bg-gradient-to-bl {
@@ -1415,6 +1410,78 @@ nav div ul li a, footer {
   top: -32px;
   /* Cache et supprime l'espace occupé */
   width: 100%;
+}
+
+/* single-projects*/
+
+.project-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  max-width: 72rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.project-container > h1 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.project-thumbnail {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-thumbnail > img {
+  border-radius: 0.5rem;
+}
+
+.project-content {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-content:hover {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.project-content:active {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.project-content > figure {
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.project-content > figure > figcaption {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.project-meta {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .hover\:animate-none:hover {

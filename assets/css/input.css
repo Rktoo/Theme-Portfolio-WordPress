@@ -19,11 +19,11 @@ body {
 }
 
 nav div ul {
-    @apply w-full flex justify-between gap-4; 
+    @apply w-full flex justify-between gap-4 ; 
 }
 
 nav div ul li {
-    @apply py-2 md:py-10 hover:underline underline-offset-4 transition-all duration-200 ease-in-out; 
+    @apply py-2 md:py-10 hover:underline underline-offset-4 transition-all duration-200 ease-in-out ; 
 }
 
 nav div ul li a, footer {
@@ -43,4 +43,38 @@ nav div ul li a, footer {
     position: fixed;
     top: -32px; /* Cache et supprime l'espace occupé */
     width: 100%;
+}
+
+
+/* single-projects*/
+
+.project-container{
+    @apply max-w-6xl mx-auto my-10 px-10 flex flex-col justify-center items-center;
+}
+
+.project-container > h1 {
+    @apply text-xl font-semibold;
+}
+
+.project-thumbnail {
+    @apply my-4;
+}
+.project-thumbnail > img {
+    @apply rounded-lg;
+}
+
+.project-content {
+    @apply my-4 text-gray-800 hover:text-gray-900 active:text-gray-900 transition-colors duration-200 ease-in-out;
+}
+
+.project-content > figure {
+    @apply w-full mt-4 flex flex-col-reverse gap-2 justify-center items-center flex-wrap;
+}
+
+.project-content > figure > figcaption{
+    @apply text-gray-600;
+}
+
+.project-meta {
+    @apply text-gray-600;
 }

@@ -54,7 +54,7 @@
         </div>
 
         <div class="mt-10 w-full flex flex-col md:flex-row justify-center md:justify-end items-center flex-wrap space-y-4 md:space-y-0">
-            <a href="#projects" class="flex bg-teal-400 text-white px-6 py-3 rounded-lg shadow-md hover:bg-red-500">Voir tous les projets</a>
+            <a href="#activities" class="flex bg-teal-400 text-white px-6 py-3 rounded-lg shadow-md hover:bg-red-500">Voir mes activités</a>
             <a href="#contact" class="ml-4 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-900">Me contacter</a>
         </div>
     </div>
