@@ -30,6 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 scrollBtn.style.opacity = 1;
                 progressBar.classList.add("animate-pulse");
+                scrollBtn.addEventListener("click", function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    })
+                });
             }
         }
     }

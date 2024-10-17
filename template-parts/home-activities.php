@@ -3,7 +3,7 @@
 <div class="max-w-6xl mx-auto px-10" id="activities">
     <h2 class="text-4xl font-bold text-center text-white">Mes Loisirs</h2>
     <p class="text-center text-[#f4f4f4] mt-4">Voici quelques-unes de mes activités et hobbies favoris.</p>
-    <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8">
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-8">
         <?php
         // Tableau des loisirs/activités
         $args = [

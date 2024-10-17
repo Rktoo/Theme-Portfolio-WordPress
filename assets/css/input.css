@@ -53,14 +53,14 @@ nav div ul li a, footer {
 }
 
 .project-container > h1 {
-    @apply text-xl font-semibold;
+    @apply text-center text-xl font-semibold;
 }
 
 .project-thumbnail {
     @apply my-4;
 }
 .project-thumbnail > img {
-    @apply rounded-lg;
+    @apply rounded-lg ;
 }
 
 .project-content {
