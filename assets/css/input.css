@@ -34,6 +34,60 @@ nav div ul li a, footer {
     @apply transition-all duration-300 ease-in-out;
 }
 
+
+/* Style pour le footer */
+/* style pour le footer */
+
+.footer-gradient {
+    @apply bg-gradient-to-r from-blue-500 to-teal-500;
+}
+
+.container {
+    @apply max-w-6xl mx-auto p-10;
+}
+
+.footer-content {
+    @apply flex flex-col items-center space-y-4;
+}
+
+.external-links {
+    @apply flex space-x-4;
+}
+
+.link-item {
+    @apply w-10 h-10;
+}
+
+.link-thumbnail {
+    @apply w-10 h-10;
+}
+
+.thumbnail-image {
+    @apply w-10 h-10 p-[0.1rem] border-black border-2 rounded-full hover:border-white transition-colors duration-200 ease-in;
+}
+
+.divider {
+    @apply w-1/2 h-[0.05rem] bg-[#f4f4f4];
+}
+
+.scroll-btn-container {
+    @apply fixed bottom-10 right-[10%] opacity-0;
+}
+
+.scroll-btn {
+    @apply relative w-8 h-8 opacity-75 hover:opacity-100 transition-opacity duration-150 ease-in-out animate-pulse hover:animate-none active:animate-none z-30 overflow-hidden;
+}
+
+.scroll-btn-icon {
+    @apply w-8 h-8 text-[#f4f4f4]  transition-all duration-200 ease-in-out z-20;
+}
+
+.scroll-btn-background {
+    @apply absolute -top-2 -left-2 bg-gray-800 w-12 h-12 rounded-full -z-10;
+}
+
+
+
 #scroll-btn {
     transition : all .3s ease-in-out;
 }
@@ -44,6 +98,8 @@ nav div ul li a, footer {
     top: -32px; /* Cache et supprime l'espace occupé */
     width: 100%;
 }
+
+
 
 
 /* single-projects*/
@@ -72,7 +128,7 @@ nav div ul li a, footer {
 }
 
 .project-content > figure > figcaption{
-    @apply text-gray-600;
+    @apply  text-gray-600;
 }
 
 .project-meta {

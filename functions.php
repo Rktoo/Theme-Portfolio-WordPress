@@ -15,6 +15,7 @@ function magnific_portfolio_setup_theme()
 function magnific_portfolio_enqueue_scripts()
 {
     wp_enqueue_style('style', get_template_directory_uri() . "/assets/css/output.css");
+    wp_enqueue_style('style-footer', get_template_directory_uri() . "/assets/css/footer.css");
     wp_enqueue_script('script-01', get_template_directory_uri() . "/assets/js/script-01.js", [], true);
 }
 
